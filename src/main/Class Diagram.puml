@@ -1,0 +1,48 @@
+@startuml
+
+class HelloApplication {
+
+    + start() throws IOException
+    + main(String[] args)
+}
+
+class Item{
+
+    + String readdescription
+    + newdescription(String newdescrption)
+    + String readduedate ()
+    + newduedate(String newduedate)
+    + String readcheck ()
+    + newcheck(String newcheck)
+
+}
+
+class ToDoList{
+
+    + ToDoList()
+
+    + additem(String description, String duedate, String check)
+
+    + removeitem (String description)
+
+    + removeallitems ()
+
+    + itemdescription (String olddescription, String newdescription)
+
+    + itemduedate (String description, String duedate)
+
+    + itemcompletion (String description, String completion)
+
+    + displayallitems ()
+
+    + displayallcompleteitems ()
+
+    + displayallincompleteitems ()
+
+    + savelist () throws IOException
+
+}
+
+Item->ToDoList
+
+@enduml
